@@ -37,13 +37,13 @@ function Header() {
           photo: result.user.photoURL,
         })
       );
-      history("/");
+      history("/home");
     });
   };
   const signOut = () => {
     auth.signOut().then(() => {
       dispatch(setSignOut());
-      history("/login");
+      history("/");
     });
   };
   return (
@@ -56,7 +56,7 @@ function Header() {
       ) : (
         <>
           <NavMenu>
-            <a href="/home">
+            <a>
               <img src="/images/home-icon.svg" alt="" />
               <span>HOME</span>
             </a>
