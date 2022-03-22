@@ -51,33 +51,34 @@ function Header() {
       <Logo>
         <img src="/images/logo.svg" alt="Disney+" />
       </Logo>
+
       {!userName ? (
         <Login onClick={signin}>Login</Login>
       ) : (
         <>
           <NavMenu>
-            <a>
-              <img src="/images/home-icon.svg" alt="" />
+            <a href="/home">
+              <img src="/images/home-icon.svg" alt="HOME" />
               <span>HOME</span>
             </a>
-            <a href>
-              <img src="/images/search-icon.svg" alt="" />
+            <a>
+              <img src="/images/search-icon.svg" alt="SEARCH" />
               <span>SEARCH</span>
             </a>
-            <a href>
-              <img src="/images/watchlist-icon.svg" alt="" />
+            <a>
+              <img src="/images/watchlist-icon.svg" alt="WATCHLIST" />
               <span>WATCHLIST</span>
             </a>
-            <a href>
-              <img src="/images/original-icon.svg" alt="" />
+            <a>
+              <img src="/images/original-icon.svg" alt="ORIGINALS" />
               <span>ORIGINALS</span>
             </a>
-            <a href>
-              <img src="/images/movie-icon.svg" alt="" />
+            <a>
+              <img src="/images/movie-icon.svg" alt="MOVIES" />
               <span>MOVIES</span>
             </a>
-            <a href>
-              <img src="/images/series-icon.svg" alt="" />
+            <a>
+              <img src="/images/series-icon.svg" alt="SERIES" />
               <span>SERIES</span>
             </a>
           </NavMenu>
@@ -91,8 +92,7 @@ function Header() {
       )}
     </Nav>
   );
-}
-
+};
 export default Header;
 const Nav = styled.nav`
   position: fixed;
@@ -176,9 +176,9 @@ const NavMenu = styled.div`
       }
     }
   }
-  /* @media (max-width: 768px) {
+   @media (max-width: 768px) {
     display: none;
-  } */
+  } 
 `;
 
 const Login = styled.a`
